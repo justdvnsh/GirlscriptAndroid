@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/profileItemiv"
+        android:layout_height="36dp"
+        android:layout_width="36dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/anything"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Your Bookmarks"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@id/profileItemiv"
+        app:layout_constraintBottom_toBottomOf="@id/profileItemiv"
+        app:layout_constraintTop_toTopOf="@id/profileItemiv"/>
+
+    <ImageView
+        android:id="@+id/profileItemiv2"
+        android:layout_height="36dp"
+        android:layout_width="36dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/profileItemiv"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/anything2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Interests"
+        android:textSize="22sp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/profileItemiv2"
+        app:layout_constraintBottom_toBottomOf="@id/profileItemiv2"
+        app:layout_constraintTop_toTopOf="@id/profileItemiv2"/>
+
+    <ImageView
+        android:id="@+id/profileItemiv3"
+        android:layout_height="36dp"
+        android:layout_width="36dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/profileItemiv2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/anything3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textSize="22sp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/profileItemiv3"
+        app:layout_constraintBottom_toBottomOf="@id/profileItemiv3"
+        app:layout_constraintTop_toTopOf="@id/profileItemiv3"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
