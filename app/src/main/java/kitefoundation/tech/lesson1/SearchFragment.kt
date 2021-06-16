@@ -8,16 +8,22 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import kitefoundation.tech.lesson1.databinding.FragmentHomeBinding
 import kitefoundation.tech.lesson1.databinding.FragmentSearchBinding
 import kotlinx.android.synthetic.main.fragment_search.*
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class SearchFragment : Fragment(){
 
     private lateinit var binding: FragmentSearchBinding
     private lateinit var bundle: Bundle
 
-    private val factory: SearchViewModelFactory = SearchViewModelFactory(SearchRepository())
+    @Inject
+    lateinit var repo: SearchRepository
+
+    private val factory: SearchViewModelFactory = SearchViewModelFactory(repo)
     private val viewModel: SearchViewModel =
         ViewModelProvider(this, factory)
             .get(SearchViewModel::class.java)

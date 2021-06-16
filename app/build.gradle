@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -70,4 +71,12 @@ dependencies {
 
     // Activity KTX for viewModels()
     implementation "androidx.activity:activity-ktx:1.1.0"
+    // dagger hilt
+    api "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    // dagger for viewmodel
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$dagger_viewModels"
+    kapt "androidx.hilt:hilt-compiler:$dagger_compiler"
+
 }
