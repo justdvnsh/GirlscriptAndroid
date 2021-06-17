@@ -28,5 +28,14 @@
             android:layout_margin="20dp"
             />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/responseRV"
+            android:layout_height="0dp"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTV"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

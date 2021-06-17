@@ -79,4 +79,10 @@ dependencies {
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:$dagger_viewModels"
     kapt "androidx.hilt:hilt-compiler:$dagger_compiler"
 
+    // retrofit and moshi
+    api(
+            "com.squareup.retrofit2:converter-gson:$gson",
+            "com.squareup.retrofit2:retrofit:$retrofit"
+    )
+
 }
