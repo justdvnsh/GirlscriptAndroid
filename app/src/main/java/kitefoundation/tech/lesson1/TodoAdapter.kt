@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import kitefoundation.tech.lesson1.databinding.LayoutTodoItemBinding
 
 class TodoAdapter(
-    private val data: List<TodoModel>
+    private val data: List<TodoModel>,
+    private val listener: TodoClickListener
 ): RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
 
     inner class TodoViewHolder(val binding: LayoutTodoItemBinding): RecyclerView.ViewHolder(binding.root)
@@ -25,7 +26,14 @@ class TodoAdapter(
 
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
         holder.binding.todo = data[position]
+        holder.binding.savebtn.setOnClickListener {
+            listener.onClickTodo(data[position])
+        }
     }
 
     override fun getItemCount(): Int = data.size
+
+    interface TodoClickListener {
+        fun onClickTodo(todo: TodoModel)
+    }
 }
