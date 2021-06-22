@@ -92,4 +92,18 @@ dependencies {
     // Kotlin Extensions and Coroutines support for Room
     implementation "androidx.room:room-ktx:2.3.0"
 
+    // firebase
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:28.1.0')
+
+    // Add the dependency for the Firebase SDK for Google Analytics
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    implementation 'com.google.firebase:firebase-auth'
+
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+
 }
+
+apply plugin: 'com.google.gms.google-services'

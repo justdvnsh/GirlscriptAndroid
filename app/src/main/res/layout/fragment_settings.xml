@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
     <data/>
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:layout_height="match_parent"
+        <Button
+            android:id="@+id/logoutBtn"
+            android:text="Logout"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:text="SETTINGS FRAGMENT"
-            android:textSize="22sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

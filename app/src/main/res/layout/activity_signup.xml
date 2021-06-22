@@ -7,7 +7,7 @@
     tools:context=".SignupActivity">
 
     <EditText
-        android:id="@+id/emailEditLogin"
+        android:id="@+id/emailEdit"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:gravity="center"
@@ -15,40 +15,62 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:hint="Enter your email...."
-        app:layout_constraintBottom_toTopOf="@id/passwordEditLogin"
+        app:layout_constraintBottom_toTopOf="@id/passwordEdit"
         />
 
     <EditText
-        android:id="@+id/passwordEditLogin"
+        android:id="@+id/passwordEdit"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/emailEditLogin"
+        app:layout_constraintTop_toBottomOf="@id/emailEdit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:hint="Enter your password...."
         />
 
-    <Button
-        android:id="@+id/loginBtn"
+    <EditText
+        android:id="@+id/nameEdit"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/passwordEditLogin"
+        app:layout_constraintTop_toBottomOf="@id/passwordEdit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Login"
+        android:hint="Enter your Name...."
+        />
+
+    <EditText
+        android:id="@+id/dobEdit"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/nameEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Enter your dob...."
         />
 
     <Button
-        android:id="@+id/takeToSignup"
+        android:id="@+id/signupBtn"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/loginBtn"
+        app:layout_constraintTop_toBottomOf="@id/dobEdit"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="take me to Signup"
+        android:text="Signup"
+        />
+
+    <Button
+        android:id="@+id/takeToLogin"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/signupBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="take me to login"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

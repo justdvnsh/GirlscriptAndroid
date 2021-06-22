@@ -5,45 +5,34 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        rateUsBtn.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW)
-            intent.setData(Uri.parse("https://google.com"))
-            startActivity(intent)
+        auth = FirebaseAuth.getInstance()
+
+        takeToSignup.setOnClickListener {
+            startActivity(Intent(this, SignupActivity::class.java))
         }
 
         loginBtn.setOnClickListener {
-            // INTENTS
-            // EXPLICIT -> When we want to open up an our own activity
-            // IMPLICIT -> when we want to open up an activity which is not one of our own , we use implicit intents
-            val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("STRING1", "THIS IS STRING1")
-            intent.putExtra("STRING2", "THIS IS STRING2")
-            startActivity(intent)
-        }
+            val email = emailEditLogin.text.toString()
+            val password = passwordEditLogin.text.toString()
 
-
-        fileChooser.setOnClickListener {
-            val intent = Intent(Intent.ACTION_GET_CONTENT)
-            intent.type = "image/*"
-            startActivityForResult(intent, 101)
-        }
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, intent: Intent?) {
-        super.onActivityResult(requestCode, resultCode, intent)
-        if (requestCode == 101) {
-            if (resultCode == RESULT_OK) {
-                val imageFile = intent?.data
-                Log.i("IMAGE", imageFile.toString())
-                iv.setImageURI(imageFile)
-            }
+            auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this) {
+                    if (it.isSuccessful) startActivity(Intent(this, MainActivity::class.java))
+                    else Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show()
+                }
         }
     }
 

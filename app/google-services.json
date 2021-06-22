@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "72471323481",
+    "project_id": "girlscriptlessons",
+    "storage_bucket": "girlscriptlessons.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72471323481:android:4ba68f4c1f3547279fa248",
+        "android_client_info": {
+          "package_name": "kitefoundation.tech.lesson1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72471323481-vgcn13kl5n3m695e33psjgihhb9lmob6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYalzkxUWqxuza45gFhsxU8e_W9PUM898"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72471323481-vgcn13kl5n3m695e33psjgihhb9lmob6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
